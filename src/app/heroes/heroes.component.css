@@ -1,0 +1,30 @@
+.heros {
+  list-style: none;
+}
+
+.heros li {
+  height: 30px;
+  background: #eee;
+  width: 100px;
+  margin: 5px;
+  line-height: 30px;
+  border: 1px solid #eee;
+  border-radius: 5px;
+}
+
+.heros li.selected {
+  background: #ddd;
+}
+
+.hero-id {
+  width: 30px;
+  display: inline-block;
+  text-align: center;
+  background: #01acf3;
+  border-radius: 5px 0 0 5px;
+}
+
+.hero-name {
+  text-align: center;
+  padding-left: 10px;
+}
