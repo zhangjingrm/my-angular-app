@@ -1,11 +1,18 @@
 <div>
-  <h2>my heros list</h2>
+  <h2>my heros</h2>
+  <div>
+  	<label>
+  		Hero name: <input type="text" #heroName />
+  	</label>
+  	<button (click)="add(heroName.value); heroName.value=''">add</button>
+  </div>
   <ul class="heros">
     <li *ngFor="let item of heroes" [class.selected]="item === selectedHero">
       <a routerLink="/detail/{{item.id}}">
         <span class="hero-id">{{item.id}}</span>
         <span class="hero-name">{{item.name}}</span>
       </a>
+      <button class="delete" title="delete hero" (click)="delete(item)">x</button>
     </li>
   </ul>
 </div>
