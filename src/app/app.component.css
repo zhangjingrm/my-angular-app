@@ -1,3 +1,35 @@
-h1 {
-  color: #01acf3;
+:host {
+  text-align: center;
+  background: #fff;
+  color: #666;
+  padding: 0;
+}
+
+:host ::ng-deep .ant-layout-footer {
+  line-height: 1.5;
+}
+
+:host ::ng-deep .ant-layout-header,
+:host ::ng-deep .ant-layout-footer {
+  background: #7dbcea;
+  color: #fff;
+}
+
+:host ::ng-deep .ant-layout-sider,
+:host ::ng-deep .ant-layout-content {
+  height: 100%;
+  min-height: 600px;
+  background: #fff;
+}
+
+:host ::ng-deep .ant-layout-content {
+  padding-left: 42px;
+}
+
+:host > ::ng-deep .ant-layout {
+  margin-bottom: 48px;
+}
+
+:host ::ng-deep .ant-layout:last-child {
+  margin: 0;
 }

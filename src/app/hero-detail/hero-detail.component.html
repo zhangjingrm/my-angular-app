@@ -4,7 +4,7 @@
     <span>id: {{hero.id}}</span>
   </div>
   <div>
-    <input type="text" [(ngModel)]="hero.name" placeholder="name" />
+    <input nz-input placeholder="name" [(ngModel)]="hero.name">
   </div>
   <button (click)="goBack()">go back</button>
   <button (click)="save()">save</button>
