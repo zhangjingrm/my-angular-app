@@ -1,9 +1,12 @@
-<div>
-  <h1>Hello World {{title}}</h1>
-  <nav>
-    <a routerLink="/heroes">Heroes</a>
-    <a routerLink="/dashboard">Dashboard</a>
-  </nav>
-  <router-outlet></router-outlet>
-  <app-messages></app-messages>
-</div>
+<nz-layout>
+  <nz-header></nz-header>
+  <nz-layout>
+    <nz-sider>
+      <app-nav></app-nav>
+    </nz-sider>
+    <nz-content>
+      <router-outlet></router-outlet>
+    </nz-content>
+  </nz-layout>
+  <nz-footer></nz-footer>
+</nz-layout>

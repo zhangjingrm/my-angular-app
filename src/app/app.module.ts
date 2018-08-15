@@ -16,6 +16,10 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { NgZorroAntdModule, NZ_I18N, zh_CN } from 'ng-zorro-antd';
 import { registerLocaleData } from '@angular/common';
 import zh from '@angular/common/locales/zh';
+import { NavComponent } from './nav/nav.component';
+import { UserCenterComponent } from './user-center/user-center.component';
+
+import { UserCenterModule } from './user-center/user-center.module';
 
 registerLocaleData(zh);
 
@@ -26,7 +30,9 @@ registerLocaleData(zh);
     HeroDetailComponent,
     MessagesComponent,
     DashboardComponent,
-    HeroSearchComponent
+    HeroSearchComponent,
+    NavComponent,
+    UserCenterComponent
   ],
   imports: [
     BrowserModule,
@@ -37,7 +43,8 @@ registerLocaleData(zh);
       InMemoryDataService, { dataEncapsulation: false }
     ),
     BrowserAnimationsModule,
-    NgZorroAntdModule
+    NgZorroAntdModule,
+    UserCenterModule
   ],
   providers: [{ provide: NZ_I18N, useValue: zh_CN }],
   bootstrap: [AppComponent]
