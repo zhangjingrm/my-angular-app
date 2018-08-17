@@ -51,7 +51,6 @@ export class HeroService {
       tap(hero => this.log(`fetched Hero id: ${id}`)),
       catchError(this.handleError<Hero>(`getHero id: ${id}`))
      )
-  	return of(HEROS.find(hero => hero.id === id));
   }
 
   updateHero(hero: Hero): Observable<any> {

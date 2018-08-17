@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { Observable } from 'rxjs';
+import { UserService } from '../user.service';
 
 @Component({
   selector: 'app-user-list',
@@ -6,6 +8,8 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./user-list.component.css']
 })
 export class UserListComponent implements OnInit {
+
+  test: Observable<any>;
 
   dataSet = [
     {
@@ -28,9 +32,17 @@ export class UserListComponent implements OnInit {
     }
   ];
 
-  constructor() { }
+  constructor(
+    private userService: UserService
+  ) { }
 
   ngOnInit() {
+    this.userService.getProject().subscribe(data => {
+      console.log(data, 999);
+    }, error => {
+      console.log(error, 888)
+    })
+    // console.log(this.test);
   }
 
 }
