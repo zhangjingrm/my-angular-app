@@ -39,9 +39,6 @@ registerLocaleData(zh);
     FormsModule,
     AppRoutingModule,
     HttpClientModule,
-    HttpClientInMemoryWebApiModule.forRoot(
-      InMemoryDataService, { dataEncapsulation: false }
-    ),
     BrowserAnimationsModule,
     NgZorroAntdModule,
     UserCenterModule
