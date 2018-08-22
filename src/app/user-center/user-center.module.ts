@@ -4,6 +4,7 @@ import { UserListComponent } from './user-list/user-list.component';
 import { UserDetailComponent } from './user-detail/user-detail.component';
 import { UserCenterRoutingModule } from './user-center-routing.module';
 import { HttpClientModule } from '@angular/common/http';
+import { FormsModule } from '@angular/forms';
 
 
 import { NgZorroAntdModule, NZ_I18N, zh_CN } from 'ng-zorro-antd';
@@ -13,7 +14,8 @@ import { NgZorroAntdModule, NZ_I18N, zh_CN } from 'ng-zorro-antd';
     CommonModule,
     NgZorroAntdModule,
     UserCenterRoutingModule,
-    HttpClientModule
+    HttpClientModule,
+    FormsModule
   ],
   providers: [{ provide: NZ_I18N, useValue: zh_CN }],
   declarations: [

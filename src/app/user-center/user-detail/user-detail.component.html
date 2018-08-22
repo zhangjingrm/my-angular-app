@@ -1,3 +1,14 @@
-<p>
-  user-detail works!
-</p>
+<div class="container">
+  <h1>Project Details</h1>
+  <form>
+    <div class="form-group">
+      <label for="projectName">项目名称</label>
+      <input type="text" class="form-control" id="projectName" name="projectName" [(ngModel)]="projectName" required>
+    </div>
+    <div class="form-group">
+      <label for="companyName">公司名称</label>
+      <input type="text" class="form-control" id="companyName" name="companyName" [(ngModel)]="companyName">
+    </div>
+    <button type="submit" class="btn btn-success" (click)="handleClick()">修改</button>
+  </form>
+</div>

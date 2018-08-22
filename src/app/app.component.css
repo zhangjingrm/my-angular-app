@@ -33,3 +33,7 @@
 :host ::ng-deep .ant-layout:last-child {
   margin: 0;
 }
+
+:host ::ng-deep  .ant-layout.ant-layout-has-sider {
+  background: #fff;
+}
