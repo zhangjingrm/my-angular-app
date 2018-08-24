@@ -1,0 +1,24 @@
+<div>
+  <form (ngSubmit)="onSubmit()" #nodeForm="ngForm">
+    <div class="form-group">
+      <label for="node.type">节点类型</label>
+      <select name="node.type" [(ngModel)]="node.type" required>
+        <option *ngFor="let item of nodeTypes" [value]="item.value">{{item.name}}</option>
+      </select>
+    </div>
+    <div class="form-group">
+      <label for="node.name" *ngIf="node.type == 1">参数名</label>
+      <label for="node.name" *ngIf="node.type == 2">参数组名</label>
+      <input type="text" class="form-control" id="name" name="node.name" [(ngModel)]="node.name" #name="ngModel" required>
+    </div>
+    <div class="form-group">
+      <label for="node.description">参数描述</label>
+      <input type="text" class="form-control" id="type" name="node.description" [(ngModel)]="node.description" required>
+    </div>
+
+    <button type="submit" class="btn btn-success" [disabled]="!nodeForm.form.valid">提交</button>
+
+    <app-dynamic-form [questions]="questions"></app-dynamic-form>
+    
+  </form>
+</div>

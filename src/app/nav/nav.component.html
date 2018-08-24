@@ -1,15 +1,16 @@
 <ul nz-menu [nzMode]="'inline'" style="width: 240px;">
   <li nz-submenu nzOpen>
-    <span title><i class="anticon anticon-mail"></i> Navigation One</span>
+    <span title><i class="anticon anticon-mail"></i> 用户权限</span>
     <ul>
       <li nz-menu-item routerLink="/userCenter/userList" routerLinkActive="active">用户列表</li>
     </ul>
   </li>
   <li nz-submenu nzOpen>
-    <span title><i class="anticon anticon-appstore"></i> Navigation Two</span>
+    <span title><i class="anticon anticon-appstore"></i> 表单相关</span>
     <ul>
-      <li nz-menu-item routerLink="/userCenter/userDetail/10" routerLinkActive="active">Option 5</li>
-      <li nz-menu-item>Option 6</li>
+      <li nz-menu-item routerLink="/forms" routerLinkActive="active">用户输入</li>
+      <li nz-menu-item [routerLink]="['/nameEditor']" routerLinkActive="active">响应式表单</li>
+      <li nz-menu-item [routerLink]="['/dynamicForm']" routerLinkActive="active">动态表单</li>
     </ul>
   </li>
   <li nz-submenu nzOpen>

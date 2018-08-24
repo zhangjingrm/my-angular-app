@@ -20,6 +20,11 @@ import { NavComponent } from './nav/nav.component';
 import { UserCenterComponent } from './user-center/user-center.component';
 
 import { UserCenterModule } from './user-center/user-center.module';
+import { FormsComponent } from './forms/forms.component';
+import { NameEditorComponent } from './name-editor/name-editor.component';
+import { ProfileEditorComponent } from './profile-editor/profile-editor.component';
+import { DynamicFormComponent } from './dynamic-form/dynamic-form.component';
+import { DynamicFormQuestionComponent } from './dynamic-form-question/dynamic-form-question.component';
 
 registerLocaleData(zh);
 
@@ -32,7 +37,12 @@ registerLocaleData(zh);
     DashboardComponent,
     HeroSearchComponent,
     NavComponent,
-    UserCenterComponent
+    UserCenterComponent,
+    FormsComponent,
+    NameEditorComponent,
+    ProfileEditorComponent,
+    DynamicFormComponent,
+    DynamicFormQuestionComponent
   ],
   imports: [
     BrowserModule,
